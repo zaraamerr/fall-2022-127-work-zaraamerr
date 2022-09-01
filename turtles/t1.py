@@ -1,5 +1,8 @@
 import turtle
 
+def sample_function():
+  print ("This is a function!")
+  print ("This can be used multiple times.")
 wn= turtle.Screen()
 
 # create the first turtle
@@ -31,5 +34,7 @@ for i in range(3):
   squirt.forward(30)
   squirt.right(120)
 
+
+sample_function()
 wn.exitonclick()
 wn.mainloop()
