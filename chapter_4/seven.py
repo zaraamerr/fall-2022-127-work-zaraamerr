@@ -3,7 +3,7 @@ import turtle
 wn = turtle.Screen()
 pirate = turtle.Turtle()
 
-# move turtle forward on the screen to capture # the entire path on the screen
+# move turtle forward on the screen to capture the entire path on the screen
 pirate.penup()
 pirate.forward(100)
 
