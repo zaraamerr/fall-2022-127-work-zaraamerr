@@ -1,40 +1,60 @@
 import turtle
 
-def sample_function():
-  print ("This is a function!")
-  print ("This can be used multiple times.")
-wn= turtle.Screen()
+def square(t,x,y,w,color,sidelen):
+  """
+  Parameters:
+  t- a turtle
+  x,y- location
+  w- width of side
+  color- color of drawing
+  sidelen- length of each side
+  Returns:
+  nothing
+  """
+   # set the location, color, width of square
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+    # draw a square
+  for i in range(4):
+      t.forward(sidelen)
+      t.right(90)
 
-# create the first turtle
-# into the variable crush
-#and make crush draw a square
+def triangle(t, x, y, w, color, sidelen):
+   # set the location, color, width of triangle
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+   #draw a triangle
+  for i in range(3):
+    t.forward(sidelen)
+    t.right(120)
 
-crush= turtle.Turtle()
-crush.up()
-crush.goto(100,100)
-crush.down()
+def ngon(t, numsides, x, y, w, color, sidelen):
+   # set the location, color, width of ngon
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+   #draw an ngon
+  for i in range(numsides):
+    t.forward(sidelen)
+    t.right(45)
+wn = turtle.Screen()
 
-for i in range(4):
-  crush.forward(50)
-  crush.right(90)  
-  
-#create a second turtle
-#into the variable squirt
-#and make squirt draw a triangle
+crush = turtle.Turtle()
 
-squirt= turtle.Turtle()
+square(crush,0,0,1,"green",50)
 
-squirt.up()
-squirt.goto(50,100)
-squirt.down()
-squirt.color("red")
-squirt.width(5)
-
-for i in range(3):
-  squirt.forward(30)
-  squirt.right(120)
-
-
-sample_function()
+squirt = turtle.Turtle()
+square(squirt,100,100,5,"red",80)
+square(crush,-50,30,3,"yellow",100)
+triangle(crush, 105, 105, 4, "green", 40)
+ngon(squirt, 8, 130, 145,3, "yellow", 70)
 wn.exitonclick()
 wn.mainloop()
