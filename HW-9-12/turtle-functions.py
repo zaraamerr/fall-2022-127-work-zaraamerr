@@ -1,5 +1,12 @@
 import turtle
 
+def position_turtle(t,x,y,w,color):
+  t.penup()
+  t.goto(x,y)
+  t.width(w)
+  t.color(color)
+  t.pendown()
+
 def square(t,x,y,w,color,sidelen):
   """
   Parameters:
@@ -12,11 +19,7 @@ def square(t,x,y,w,color,sidelen):
   nothing
   """
    # set the location, color, width of square
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  position_turtle(t,x,y,w,color)
     # draw a square
   for i in range(4):
       t.forward(sidelen)
@@ -34,11 +37,7 @@ def triangle(t, x, y, w, color, sidelen):
   nothing
   """
    # set the location, color, width of triangle
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  position_turtle(t,x,y,w,color)
    #draw a triangle
   for i in range(3):
     t.forward(sidelen)
@@ -56,11 +55,7 @@ def hexagon(t,x,y,w, color, sidelen):
   nothing
   """
    # set the location, color, width of hexagon
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  position_turtle(t,x,y,w,color)
    # draw hexagon
   for i in range(6):
     t.forward(sidelen)
@@ -78,11 +73,7 @@ def ngon(t,numsides,x,y,w,color,sidelen):
   nothing
   """
    # set the location, color, width of ngon
-  t.penup()
-  t.goto(x,y)
-  t.width(w)
-  t.color(color)
-  t.pendown()
+  position_turtle(t,x,y,w,color)
    # draw any polygon
   for i in range(numsides):
     t.forward(sidelen)
