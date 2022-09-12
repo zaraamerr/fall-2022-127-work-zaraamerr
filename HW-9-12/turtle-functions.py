@@ -64,7 +64,7 @@ def hexagon(t,x,y,w, color, sidelen):
    # draw hexagon
   for i in range(6):
     t.forward(sidelen)
-    t.right(300)
+    t.right(60)
 
 def ngon(t,numsides,x,y,w,color,sidelen):
   """
