@@ -49,3 +49,30 @@ print(is_rightangled(4.1, 8.2, 9.1678787077))
 print(is_rightangled(4.1, 8.2, 9.16787))
 print(is_rightangled(4.1, 8.2, 9.168))
 print (is_rightangled(0.5, 0.4, 0.64031))
+
+# coding bat
+  # hello_name
+def hello_name(name):
+  return "'Hello"+ name +"!'"
+  
+#test trials
+print(hello_name('Zara'))
+print(hello_name('Michael'))
+
+# make_out_word
+def make_out_word(out,word):
+  return out[:2] + word + out[2:]
+
+#test trials
+print(make_out_word('<<>>', 'cheese'))
+print(make_out_word('[[]]', 'coding'))
+
+#first_two
+def first_two(str):
+  if len(str) <= 2:
+    return str
+  return str[:2]
+
+#test trials
+print(first_two('computer'))
+print(first_two('autumn'))
