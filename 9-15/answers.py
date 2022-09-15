@@ -41,7 +41,6 @@ def is_rightangled(a, b, c):
         is_rightangled = abs(a**2 + b**2 - c**2) < 0.001
     return is_rightangled
 
-
 #test trials
 print(is_rightangled(1.5, 2.0, 2.5))
 print(is_rightangled(4.0, 8.0, 16.0))
