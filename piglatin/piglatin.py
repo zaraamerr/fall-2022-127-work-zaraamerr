@@ -4,12 +4,12 @@ def initialize(name):
     returns: a string in the form "F. Last"
     """
     result = ""
-    # isolate, uppercase and add first init to result
+# isolate, uppercase and add first init to result
     first = name[0]
     first = first.upper() 
     result = result + first + "."
 
-    # find the last name (after space), cap it and add to result
+# find the last name (after space), cap it and add to result
     location = name.find(' ')
     last = name[location+1:].capitalize()
     result = result + ' ' + last
@@ -25,14 +25,14 @@ def bondify(name):
     return:string in the form "Last, First Last"
     """
     result=""
-   # find the place where the first and last name are separated by a space
+# find the place where the first and last name are separated by a space
     location= name.find(' ')
    #establish and capitalize the first name
     first= name[0:location]
     first= first.capitalize()
    #establish and capitalize the last name
     last= name[location+1:].capitalize()
-   #add first and last name to the result in the form last, first, last
+#add first and last name to the result in the form last, first, last
     result= last + "," + " "+ first + " " + last
     return result
 
@@ -63,11 +63,12 @@ def piglatin(word):
 
   firstletter= word[0]
   firstletter= firstletter.upper()
-
+# if word starts w/ consonant, then we remove first letter and add 'ay'.
   if firstletter in consonants:
     removefirstletter= word[1:len(word)]
     result= removefirstletter + firstletter + "ay"
     return result
+ # if word starts w/ vowel we just add 'way'.
   elif firstletter in vowels:
     result= word + "way"
     return result
@@ -76,3 +77,6 @@ def piglatin(word):
 
 result= piglatin("cheese")
 print ("cheese -->", result)
+
+result= piglatin ("hello")
+print("hello -->", result)
