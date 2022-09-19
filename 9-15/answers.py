@@ -1,21 +1,29 @@
 # question 7
 
 def is_even(n):
-    if n % 2 == 0:
-        return True
-    else:
-        return False
+  """
+  n: an integer
+  returns: true if n is even, false otherwise
+  """
+  if n % 2 == 0:
+    return True
+  else:
+    return False
 
 #test trials
 
-print(is_even(10))
-print(is_even(5))
-print(is_even(1))
-print(is_even(0))
+result= is_even(10)
+print("The result is",is_even(10))
+result= is_even(5)
+print("The result is",is_even(5))
 
 #question 8
 
 def is_odd(n):
+  """
+  n= an integer
+  returns: true if n is odd, false otherwise
+  """
   if is_even(n):
      return False
   else:
@@ -23,31 +31,33 @@ def is_odd(n):
 
 #test trials
 
-print(is_odd(10))
-print(is_odd(5))
-print(is_odd(1))
-print(is_odd(0))
+result= is_odd(10)
+print("The result is",is_odd(10))
+result= is_odd(5)
+print("The result is",is_odd(5))
 
 #question 10 & 11
 
 def is_rightangled(a, b, c):
-    is_rightangled = False
+  """
+  c is longest
+  """
+  return a*a + b*b == c*c
 
-    if a > b and a > c:
-        is_rightangled = abs(b**2 + c**2 - a**2) < 0.001
-    elif b > a and b > c:
-        is_rightangled = abs(a**2 + c**2 - b**2) < 0.001
-    else:
-        is_rightangled = abs(a**2 + b**2 - c**2) < 0.001
-    return is_rightangled
+def is_rightangled2(a,b,c):
+  """
+  any order for the sides
+  """
+  return is_rightangled(a,b,c) or is_rightangled(b,c,a) or is_rightangled(a,c,b)
 
 #test trials
-print(is_rightangled(1.5, 2.0, 2.5))
-print(is_rightangled(4.0, 8.0, 16.0))
-print(is_rightangled(4.1, 8.2, 9.1678787077))
-print(is_rightangled(4.1, 8.2, 9.16787))
-print(is_rightangled(4.1, 8.2, 9.168))
-print (is_rightangled(0.5, 0.4, 0.64031))
+
+result= is_rightangled(3,4,5)
+print("The result is", is_rightangled(3,4,5))
+result=is_rightangled(5,4,3)
+print("The result is", is_rightangled(5,4,3))
+
+print("The result is", is_rightangled2(4,5,3))
 
 # coding bat
   # hello_name
