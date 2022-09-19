@@ -6,7 +6,7 @@ def initialize(name):
     result = ""
     # isolate, uppercase and add first init to result
     first = name[0]
-    first = first.upper()
+    first = first.upper() 
     result = result + first + "."
 
     # find the last name (after space), cap it and add to result
