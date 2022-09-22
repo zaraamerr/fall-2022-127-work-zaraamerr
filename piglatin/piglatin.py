@@ -70,7 +70,7 @@ def piglatin(word):
     return result
  # if word starts w/ vowel we just add 'way'.
   elif firstletter in vowels:
-    result= word + "way"
+    result= word + "yay"
     return result
  
 # test piglatin
@@ -79,4 +79,7 @@ result= piglatin("cheese")
 print ("cheese -->", result)
 
 result= piglatin ("hello")
+print("hello -->", result)
+
+result= piglatin ("apple")
 print("hello -->", result)
