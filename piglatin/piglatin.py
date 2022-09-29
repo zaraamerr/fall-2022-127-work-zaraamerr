@@ -56,13 +56,13 @@ def piglatin(word):
   try to handle uppercase words
   """
  # establish vowels and consonants
-  vowels= ('A', 'E', 'I','O','U', 'Y')
-  consonants=('B','C','D','F','G','H','J','K','L','M','N','P''Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z')
+  vowels= ('a', 'e', 'i','o','u', 'y')
+  consonants=('b','c','d','f','g','h','j','k','l','m','n','p''q', 'r', 's', 't', 'v', 'w', 'x', 'z')
   
   result=""
 
   firstletter= word[0]
-  firstletter= firstletter.upper()
+  firstletter= firstletter.lower()
 # if word starts w/ consonant, then we remove first letter and add 'ay'.
   if firstletter in consonants:
     removefirstletter= word[1:len(word)]
