@@ -55,31 +55,42 @@ def piglatin(word):
 
   try to handle uppercase words
   """
- # establish vowels and consonants
-  vowels= ('a', 'e', 'i','o','u', 'y')
-  consonants=('b','c','d','f','g','h','j','k','l','m','n','p''q', 'r', 's', 't', 'v', 'w', 'x', 'z')
-  
-  result=""
 
-  firstletter= word[0]
-  firstletter= firstletter.lower()
-# if word starts w/ consonant, then we remove first letter and add 'ay'.
-  if firstletter in consonants:
-    removefirstletter= word[1:len(word)]
-    result= removefirstletter + firstletter + "ay"
-    return result
- # if word starts w/ vowel we just add 'way'.
-  elif firstletter in vowels:
-    result= word + "yay"
-    return result
- 
-# test piglatin
+  if word[-1] in ".!?":
+        end_of_sent = True
+        punctuation = word[-1]
+        word = word[:-1]
+  else:
+        end_of_sent = False
 
-result= piglatin("cheese")
+    # keep track of if the word had a capital letter
+  if word[0] == word[0].upper():
+        capital = True
+  else:
+        capital = False
+    
+    # transform to lower case
+  word = word[0].lower()+word[1:]
+  first = word[0]
+
+    # turn into piglatin
+  if first in 'aeiou':
+        result = word + 'ay'
+  else:
+        result = word[1:]+first+'ay'
+    
+    # if we started with a capital letter we
+    # have to transform the result back to have
+    # a capital letter
+  if capital:
+        result = result.capitalize()
+    
+    # test to see if we have to add punctuation on at the end
+  if end_of_sent:
+        result = result + punctuation
+  return result
+
+result = piglatin("cheese")
 print ("cheese -->", result)
-
-result= piglatin ("hello")
-print("hello -->", result)
-
-result= piglatin ("apple")
-print("hello -->", result)
+result = piglatin ("Cheese!")
+print ("Cheese! -->", result)
