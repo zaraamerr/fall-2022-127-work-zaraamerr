@@ -8,7 +8,7 @@ def avg(n):
 
     # divide by the number of items
     average = sum / len(n)
-    return average
+    return average 
 
 def sum_of_squares(n):
     sum = 0;
