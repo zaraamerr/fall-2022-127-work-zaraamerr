@@ -66,7 +66,7 @@ def change_value(l, index, value):
     # or we can call the list method and append item
     #result.append(item)
     #result= l.copy()
-    result=1[:]
+    result=l[:]
     result[index]=value
     return result
 
