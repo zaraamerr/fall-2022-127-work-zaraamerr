@@ -11,7 +11,6 @@ l=[8,6,-4]
 result=find_smallest(l)
 print ("This is the smallest number", result)
 
-
 #Write a function that returns a new list that contains all the odd items in the original list
 
 #empty lists
