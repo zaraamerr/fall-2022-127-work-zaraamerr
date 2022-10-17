@@ -10,6 +10,8 @@ def find_smallest(l):
 l=[8,6,-4]
 result=find_smallest(l)
 print ("This is the smallest number", result)
+
+
 #Write a function that returns a new list that contains all the odd items in the original list
 
 #empty lists
@@ -58,9 +60,66 @@ def square_list(l):
     for item in l:
         result.append(item*item)
     return result
-
+# test function
+l= [3,2,4]
+result= square_list(l)
+print (result)
 
 
 #Write a function that takes two lists of numbers and returns a new list where each item is the corresponding value of the original lists added together. Ex [1,2,3] and [10,20,30] would return the list [11,22,33]
 
+def combine_add(l1,l2):
+    result = []
+    if len(l1) < len(l2):
+        shorter = len(l1)
+    else:
+        shorter = len(l2)
+    for i in range(shorter):
+        result.append( l1[i] + l2[i] )
+    if len(l1) > shorter:
+        result = result + l1[i:]
+    else:
+        result = result + l2[i:]
+    return result
+
+# test function
+l1=[1,2,4,6]
+l2=[33,44,55,6]
+result= combine_add(l1,l2)
+print(result)
+
 #chapter 10 # 10, 11, 12
+
+def count_word_length(s):
+    count = 0
+    for word in s.split():
+        if len(word) == 5:
+            count = count + 1
+    return count
+#test the function
+result= count_word_length("chives, corn, hairs, coders")
+print (result)
+
+def sum(l):
+    result = []
+    i = 0
+    while l[i] % 2 != 0:
+        result.append(l[i])
+        i=i+1
+    return result
+# test function
+l=[3,5,4,7]
+result= sum(l)
+print (result)
+
+def up_to_sam(l):
+    result = []
+    i = 0
+    while l[i] != "sam":
+        result.append(l[i])
+        i=i+1
+    return " ".join(result)
+#test function
+l= ["juice", "label", "thrice", "code","python", "sam", "lid","vacuum"]
+result= up_to_sam(l)
+print (result)
