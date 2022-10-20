@@ -29,3 +29,4 @@ print(space_location)
 #s5 = s1[space_location+1:len(s1)]
 s5 = s1[space_location+1:] # nothing after the : means go to the end
 print(s5)
+
