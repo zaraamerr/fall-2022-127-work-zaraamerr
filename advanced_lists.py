@@ -2,7 +2,7 @@ import random
 l1 = [1,2,3,5]
 s = 'hello world'
 number = 20
-
+print("")
 def make_list(item):
     return [item]
 
