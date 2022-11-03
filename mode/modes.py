@@ -1,4 +1,4 @@
-
+import random
 def findLargest(l):
     current_large = l[0]
     for item in l[1:]:
@@ -42,14 +42,39 @@ def mode(l):
     both of those values appear 3 times which is the most
     """
     modeSoFar = l[0]
-    freqSoFar = freq(l,modeSoFar)
+    freqSoFar = l.count(modeSoFar)
     for item in l[1:]:
-        if freq(l,item) > freqSoFar:
+        if l.count(item) > freqSoFar:
             modeSoFar = item
-            freqSoFar = freq(l,item)
+            freqSoFar = l.count(item)
             
     return modeSoFar
 
 l= [4,3,4,2,3,2,2,2,2,2,4,4,4,4,4,5,5,5,5,3,3]
 result= mode(l)
 print (result)
+
+def buildRandomList(size,maxvalue):
+    #result = []
+    #for x in range(size):
+    #    result.append(random.randrange(maxvalue))
+    #return result
+    result = [random.randrange(maxvalue) for x in range(size)]
+    return result 
+
+def testMode(size,maxValue):
+    print("Dataset Size: ",size)
+    dataset = buildRandomList(size,maxValue)
+    # print(dataset)
+    m = mode(dataset)
+    print("Mode: ",m)
+
+def testFindLargest(size,maxValue):
+    print("Dataset Size: ",size)
+    dataset = buildRandomList(size,maxValue)
+    # print(dataset)
+    m = findLargest(dataset)
+    print("Largest: ",m)
+
+testFindLargest(8000,30)
+testMode(40000,30)
