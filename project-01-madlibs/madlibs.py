@@ -6,10 +6,9 @@ present_verbs=["mixes", "pours", "launches", "hurls", "sips", "gobbles"]
 verbs=["eat", "sleep on", "destroy", "love", "run", "stomp on"]
 verbs_ending_in_ing=["baking", "constructing", "stomping on", "laughing at", "fighting"]
 nouns=["salt", "sugar", "shoe", "broccoli", "computer", "skyscraper", "paint", "pan"]
-plural_nouns=["eggs", "phones", "books", "houses"]
+plural_nouns=["eggs", "phones", "books", "houses", "cups", "tablesp", "friends", "siblings"]
 character_names=["Paulina", "Fatima", "Remi", "Mr.Rogers", "Bugs Rabbit"]
-adjectives=["awesome", "delicious", "horrific", "lovely", "speedy" ]
-
+adjectives=["awesome", "delicious", "horrific", "lovely", "speedy", "beautiful","necessary", "useless", "silly", "goofy", "goopy", "watery" ]
 
 #open data file: open()
 #read the entire data file: .read()
