@@ -1,3 +1,1 @@
-Hey, this is a MadLibs story! Created by Zara Amer.
-
-I am a computer science major and I like coding most of the time. I am a part of the Daedalus honors program. 
+<CHARACTER> is <VERB ENDING IN -ING> a <ADJECTIVE> cake. First, <CHARACTER> gathers the <ADJECTIVE> ingredients such as <NOUN>, <NOUN>, and <PLURAL NOUN>. Then, <CHARACTER> <PRESENT VERB> all the ingredients together. Finally, <CHARACTER> <PRESENT VERB> the <ADJECTIVE> batter into the <PLURAL NOUN> and put them into a(n) <NOUN> to bake. After the cake is done <VERB ENDING IN -ING>, <CHARACTER> adds the <NOUN>. Don't forget this <ADJECTIVE> step: <VERB> the cake with your <PLURAL NOUN>

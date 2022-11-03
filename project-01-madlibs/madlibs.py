@@ -2,15 +2,13 @@
 
 #parts of speech: you can do either just nouns as a category or divide the nouns category into subcategories like plural nouns, singular nouns, proper nouns, etc. it doesn't matter so much if the tense or the usage of the speech doesn't make sense grammatically within the story, as long as the code works.
 
-#past verbs:
-#present verbs:
-#future verbs:
-#singular nouns:
-#plural nouns:
-#proper nouns:
-#adjectives:
-#adverbs:
-#animals:
+present_verbs:[mixes, pours, dumps, hurls, throws]
+verbs:[eat, drink, chew, stomp, wave]
+verbs_ending_in_ing:[baking, constructing, eating,sleeping, jumping, laughing]
+nouns: [shoe, thermometer, flour, sugar, backpack, salt, leaf, bedsheet, chicken, mountain, oven]
+plural_nouns:[eggs, holes, pans, chairs, cups, doors, cars, horses]
+character_names:[Michael, Anna, Joseph, Zara]
+adjectives:[]
 
 
 #open data file: open()
