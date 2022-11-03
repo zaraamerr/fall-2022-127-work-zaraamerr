@@ -2,13 +2,13 @@
 
 #parts of speech: you can do either just nouns as a category or divide the nouns category into subcategories like plural nouns, singular nouns, proper nouns, etc. it doesn't matter so much if the tense or the usage of the speech doesn't make sense grammatically within the story, as long as the code works.
 
-present_verbs=[]
-verbs=[]
-verbs_ending_in_ing=[]
-nouns=[]
-plural_nouns=[]
-character_names=[]
-adjectives:[]
+present_verbs=["mixes", "pours", "launches", "hurls", "sips", "gobbles"]
+verbs=["eat", "sleep on", "destroy", "love", "run", "stomp on"]
+verbs_ending_in_ing=["baking", "constructing", "stomping on", "laughing at", "fighting"]
+nouns=["salt", "sugar", "shoe", "broccoli", "computer", "skyscraper", "paint", "pan"]
+plural_nouns=["eggs", "phones", "books", "houses"]
+character_names=["Paulina", "Fatima", "Remi", "Mr.Rogers", "Bugs Rabbit"]
+adjectives=["awesome", "delicious", "horrific", "lovely", "speedy" ]
 
 
 #open data file: open()
