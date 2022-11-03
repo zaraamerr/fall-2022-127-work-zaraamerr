@@ -80,24 +80,34 @@ testFindLargest(8000,30)
 testMode(40000,30)
 
 def fastMode(dataset):
-    # assume all values in dataset
-    # are between 0 and 99 inclusive
-
+    # find largest value in dataset
+    largest=findLargest(dataset)
     # 1. make a list of 100 slots
     # and set them all to 0
     # this will store our tallies
-
+    tallies=[0 for x in range (largest + 1)]
     # 2. Loop through our dataset
     # and for each item incremement
     # (add 1) to the appropriate
     # slot in the tallies list
-
+    for item in dataset:
+      tallies[item]= tallies[item] + 1
     # 3. the index with the highest
     # value in tallies is the mode
+    # find the bucket that has the largest value
+    # that's the one that occurred the most
+    mode_count=findLargest(tallies)
+    return tallies
+    # find and return the index that holds 
+    #mode_count in tallies
+    for i in range(len(tallies)):
+      if tallies[i]==mode_count:
+        return i
 
-    dataset= buildRandomList(100,99)
-    c.count=[dataset]
-    return [i for i, v in c.items() if i== c.most_common (1)[0][1]]
+def testFastMode(size, maxvalue):
+  dataset=buildRandomList(size,maxvalue)
+  print(dataset)
+  result= fastMode(dataset)
+  print (result)
 
-result= fastMode(dataset)
-print(result)
+testFastMode(45,7)
