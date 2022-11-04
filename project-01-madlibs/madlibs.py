@@ -16,18 +16,19 @@ data = f.read()
 #split it into words
 storyContent = data.split()
 
-#create a variable for the main character's name that remains constant throughout the story.
+#then, create a variable for the main character's name that remains constant throughout the story.
 
 import random
 
 randnames= random.choice(names)
 storyContent= [item.replace("<name>", randnames) for item in storyContent]
 
-#then, replace the placeholders in the story with the randomly selected parts of speech from the lists. thank you Derek for explaining how to use random.choice to ensure the parts of speech are randomized each time the code is run!
+#then, replace the placeholders in the story with the randomly selected parts of speech from the lists. 
+#thank you Derek for explaining how to use random.choice to ensure the parts of speech are randomized each time the code is run!
 
 storyContent= [item.replace("<adjective>", random.choice(adjectives)) for item in storyContent]
 storyContent= [item.replace("<noun>", random.choice(nouns)) for item in storyContent]
 storyContent= [item.replace("<verb-ing>", random.choice(verbs)) for item in storyContent]
 
-#print the story
+#finally, print the story
 print(storyContent)
