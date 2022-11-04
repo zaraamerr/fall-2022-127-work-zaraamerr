@@ -5,19 +5,32 @@
 
 #first, let's establish the parts of speech and their respective lists
 
-adjectiveList=["joyous", "fun", "breezy", "hot", "cold", "loud", "quiet", "peaceful", "chaotic"]
-nounList=["river", "lake", "mountain", "hotel", "beach", "fire department", "ditch", "raveen", "valley"]
-verb_ing_List=["hiking", "crying", "laughing", "hanggliding", "coding", "swimming", "hurling", "running"]
-nameList=["Tommy", "Jessie", "Lora", "Michael Jackson", "Drake", "Josh", "Betsy"]
+adjectives=["exciting", "fun", "boring", "breezy", "hot", "cold", "loud", "quiet", "peaceful", "chaotic"]
+nouns=["river", "lake", "mountain", "hotel", "beach", "fire department", "ditch", "raveen", "valley"]
+verbs=["hiking", "crying", "laughing", "hanggliding", "coding", "swimming", "hurling", "running"]
+names=["Tommy", "Jessie", "Lora", "Michael Jackson", "Drake", "Josh", "Betsy"]
 
 #next, let's open the data file
-
-#, read it, and split it into words so it's easy to iterate through the text and substitute the parts of speech into the mad libs story.
-
 f = open('madlibsstory.txt')
-storywords = f.read()
-print (storywords)
+#read the file
+data = f.read()
+#split it into words
+storyContent = data.split()
 
-#substituting randomized parts of speech into the mad libs story
+#then, create variables that hold the value of randomized parts of speech
 
 import random
+
+randadjectives= random.choice(adjectives)
+randnouns= random.choice(nouns)
+randverbs= random.choice(verbs)
+randnames= random.choice(names)
+
+#then, replace the placeholders with the randomly selected parts of speech from the lists
+
+storyContent= [item.replace("<name>", randnames) for item in storyContent]
+storyContent= [item.replace("<adjective>", randadjectives) for item in storyContent]
+storyContent= [item.replace("<noun>", randnouns) for item in storyContent]
+storyContent= [item.replace("<verb-ing>", randverbs) for item in storyContent]
+
+print(storyContent)
