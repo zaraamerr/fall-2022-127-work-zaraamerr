@@ -12,7 +12,7 @@ names=["Tommy", "Jessie", "Michael Jackson", "Drake", "Josh", "Betsy"]
 #next, let's open the data file
 f = open('madlibsstory.txt')
 #read the file
-data = f.read()
+data= f.read()
 #split it into words
 storyContent = data.split()
 
@@ -30,5 +30,6 @@ storyContent= [item.replace("<adjective>", random.choice(adjectives)) for item i
 storyContent= [item.replace("<noun>", random.choice(nouns)) for item in storyContent]
 storyContent= [item.replace("<verb-ing>", random.choice(verbs)) for item in storyContent]
 
+
 #finally, print the story
-print(storyContent)
+print(" ".join(storyContent))
