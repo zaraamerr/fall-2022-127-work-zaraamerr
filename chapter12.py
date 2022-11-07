@@ -2,13 +2,13 @@
 
 sentence = input("Enter a sentence: ")
 
-sentence = sentence.lower() # convert to lowercase
+sentence = sentence.lower()
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-letter = {} # empty dictionary
+letter = {}
 for char in sentence:
-    if char in alphabet: # ignore any punctuation, numbers, etc
+    if char in alphabet:
         if char in letter:
             letter[char] = letter[char] + 1
         else:
@@ -17,3 +17,4 @@ for char in sentence:
 keys = letter.keys()
 for char in sorted(keys):
     print(char, letter[char])
+
