@@ -17,4 +17,3 @@ for char in sentence:
 keys = letter.keys()
 for char in sorted(keys):
     print(char, letter[char])
-
