@@ -17,3 +17,15 @@ for char in sentence:
 keys = letter.keys()
 for char in sorted(keys):
     print(char, letter[char])
+
+s="""this is a string with bunch of lower case letters. There's nothing a too interesting about it other than the fact that there are a bunch of words over multiple lines and we're going to do some processing on them"""
+def count_words(s):
+    counts = {}
+    for word in s.split():
+        counts.setdefault(word,0)
+        counts[word] = counts[word]+1
+        
+    return counts
+
+result= count_words(s)
+print (result)
