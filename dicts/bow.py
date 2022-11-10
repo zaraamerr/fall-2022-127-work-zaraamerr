@@ -1,27 +1,27 @@
 # bag of words starter code!!
 
-#def clean(s):
-    #letters = []
-    #for l in s:
-        #if l.isalpha() or l==' ' or l=='\n':
-          #letters.append(l)
-    #result = "".join(letters)
-    #result = result.lower()
-    #return result 
+def clean(s):
+    letters = []
+    for l in s:
+        if l.isalpha() or l==' ' or l=='\n':
+          letters.append(l)
+    result = "".join(letters)
+    result = result.lower()
+    return result 
 
-#def build_bow(data):
-    #counts = {}
-    #for word in data.split():
-        #counts.setdefault(word,0)
-        #counts[word] = counts[word]+1
+def build_bow(data):
+    counts = {}
+    for word in data.split():
+        counts.setdefault(word,0)
+        counts[word] = counts[word]+1
         
-    #return counts
+    return counts
 
 
 
-#file = open("scandal.txt")
+file = open("scandal.txt")
 
 
-#raw_data = file.read()
-#data = clean(raw_data)
-#bag = build_bow(data)
+raw_data = file.read()
+data = clean(raw_data)
+bag = build_bow(data)
