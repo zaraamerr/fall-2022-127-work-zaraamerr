@@ -4,7 +4,7 @@
 import re #helps split text into words and punctuation
 
 i= open('input.txt') #open input
-idata= i.read().lower() #reads input and converts all text to lowercase
+idata= i.read() #reads input and converts all text to lowercase
 iwords= re.findall(r"[\w']+|[.,!?;]", idata) #splits input into individual words and punctuation
 
 #EXTRA 1 BELOW
@@ -20,7 +20,7 @@ for i in pwords: #iterate thru the data
 #uses dict to translate input from english to pirate speak:
   new_words=[] #empty list to store new input in
   for word in iwords: #iterate thru words in input
-    if word in pirate: #if a word in the input matches with a word in the pirate dictionary, append new value from pirate dict to input
+    if word in pirate: #if a word in the input matches with a word in the pirate dictionary, append new value from pirate dict to new input
       new_words.append(pirate[word])
     else: #if not, append original word
       new_words.append(word)
