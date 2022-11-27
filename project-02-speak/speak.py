@@ -1,10 +1,11 @@
 #pirate speak project // solo
 #extra 1: 
 
+import re #helps us split text into words and punctuation
+
 i= open('input.txt') #input
 idata= i.read().lower() #reads input and converts whole text to lowercase
-iwords= idata.split() #splits input into individual words
-punctuation= ['.', ',','!', '?', ';'] 
+iwords= re.findall(r"[\w']+|[.,!?;]", idata) #splits input into individual words and punctuation
 
 english_to_pirate={"hi": "ahoy",
 "buddy": "matey",
@@ -33,7 +34,6 @@ english_to_pirate={"hi": "ahoy",
 "cafeteria": "swill dungeon",
 "sea": "briney deep"
 }                  
-
 
 new_words=[]
 for word in iwords:
