@@ -1,9 +1,10 @@
-#pirate speak project // solo
+#pirate speak project -- SOLO
 #extra 1: Store your translations in a file named pirate.dat the file should have lines in the form “word:translation.”
+#extra 2: Handle upper and lower case and/or punctuation.
 
-import re #helps us split text into words and punctuation
+import re #helps split text into words and punctuation
 
-i= open('input.txt') #input
+i= open('input.txt') #open input
 idata= i.read().lower() #reads input and converts whole text to lowercase
 iwords= re.findall(r"[\w']+|[.,!?;]", idata) #splits input into individual words and punctuation
 
@@ -11,24 +12,19 @@ iwords= re.findall(r"[\w']+|[.,!?;]", idata) #splits input into individual words
 pirate={} #empty dict
 p=open('pirate.dat') 
 pdata= p.read() #read data
-pwords=pdata.split("\n") #parse thru data 
+pwords=pdata.split("\n") #parse thru data
 
 for i in pwords: #iterate thru the data
-  index= i.rfind(":") #find the colon
-  pirate[i[0:index]]=i[index+1:] 
+  index= i.rfind(":") #set the index as the placement of the colon
+  pirate[i[0:index]]=i[index+1:] #put words into dict
 
-new_words=[] #empty list to store new story in
-for word in iwords: #iterate thru words in story
-  if word in pirate: #if a word in the story matches with a word in the pirate dictionary, append new value from pirate dict to story
-    new_words.append(pirate[word])
-  else: #if not, append original word
-    new_words.append(word)
+#uses dict to translate input from english to pirate speak:
+  new_words=[] #empty list to store new input in
+  for word in iwords: #iterate thru words in input
+    if word in pirate: #if a word in the input matches with a word in the pirate dictionary, append new value from pirate dict to input
+      new_words.append(pirate[word])
+    else: #if not, append original word
+      new_words.append(word)
 
 new_text= ' '.join(new_words)
-print (new_text) #new story
-
-#capitalization/punctuation extra
-#punc: ['.',',','!', '?', ";"] #establish punctuation to look out for
-#for word in iwords:
-  #if word.endswith(punc): #if a word has a punctuation mark after it
-    
+print(new_text)
