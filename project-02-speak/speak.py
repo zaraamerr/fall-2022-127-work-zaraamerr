@@ -1,11 +1,10 @@
 #pirate speak project -- SOLO
 #extra 1: Store your translations in a file named pirate.dat the file should have lines in the form “word:translation.”
-#extra 2: Handle upper and lower case and/or punctuation.
 
 import re #helps split text into words and punctuation
 
 i= open('input.txt') #open input
-idata= i.read().lower() #reads input and converts whole text to lowercase
+idata= i.read().lower() #reads input and converts all text to lowercase
 iwords= re.findall(r"[\w']+|[.,!?;]", idata) #splits input into individual words and punctuation
 
 #EXTRA 1 BELOW
@@ -25,6 +24,7 @@ for i in pwords: #iterate thru the data
       new_words.append(pirate[word])
     else: #if not, append original word
       new_words.append(word)
-
 new_text= ' '.join(new_words)
-print(new_text)
+
+print("ORIGINAL TEXT: ", idata)
+print("TRANSLATED TEXT:", new_text)
