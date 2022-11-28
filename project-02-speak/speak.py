@@ -40,4 +40,4 @@ new_text= ' '.join(new_words)
 print("ORIGINAL TEXT: ", idata, "\n")
 print("TRANSLATED TEXT:", new_text, "\n")
 
-#done!!
+#done!
