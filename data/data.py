@@ -44,3 +44,5 @@ print("Most people described the UFO as the shape of a " + max_shape)
 #plot
 ufo_counts.plot(kind='bar')
 plt.show() #show the plot, the x values is the location/state and the y values are the number of ufo sightings. The bar graph aims to show how many UFO sightings occurred in each state.
+
+#done w/ project.
