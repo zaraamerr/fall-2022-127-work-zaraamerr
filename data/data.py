@@ -1,5 +1,5 @@
 #Data Project: Solo
-#Decription: Analysis of a CSV document containing information about UFO sightings throughout the US. I am analyzing how many UFO sightings occur per state, creating a bar graph to represent that data, and stating which state has the most UFO sightings. I am using PANDAS to analyze my data.
+#Decription: Analysis of a CSV document containing information about UFO sightings throughout the US. I am analyzing how many UFO sightings occur per state, creating a bar graph to represent that data, stating which state has the most UFO sightings, and analyzing which shape most people describe the UFO as. I am using PANDAS to analyze my data.
 #EXTRA 1: Use multiple aspects of a single data source in your analysis.
 #EXTRA 2: Use Matplotlib or another Python graphing/plotting library to visualize part or all of your analysis.
 
