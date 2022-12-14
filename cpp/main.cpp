@@ -12,7 +12,7 @@ int main() {
   // No user input, instead random numbers are generated using <ctime>.
   std::srand(std::time(nullptr));
 
-  // Generate two random numbers and prints them out
+  // Generate two random numbers and print them out
   int a = std::rand();
   int b = std::rand();
   std::cout << "The two numbers are: " << a << " and " << b << std::endl;
@@ -25,7 +25,7 @@ int main() {
     std::cout << a << " and " << b << " are equal" << std::endl;
   }
 
-  // Show a working for loop. This for loop is used to rints the numbers from 1 to 5.
+  // Show a working for loop. This for loop is used to print the numbers from 1 to 5.
   for (int i = 1; i <= 5; i++) {
     std::cout << i << std::endl;
   }
