@@ -19,25 +19,27 @@ df.columns
 #analyze how many ufo sightings per state?
 
 ufo_counts= df['Location.State'].value_counts() #variable that counts sightings per state
-print (ufo_counts) #prints each state and their total UFO sightings
+print ("Below is a list of each state and its total UFO sightings: \n") 
+print(ufo_counts) #prints each state and their total UFO sightings
 
 #which state has the most ufo sightings?
 
 max_state= ufo_counts.idxmax() #determines the state with the most UFO sightings
 max_sightings= ufo_counts.max() #determines the number of said UFO sightings
-print("The state with the most UFO sightings is", max_state, "with " + str(max_sightings) + " UFO sightings.")
+print("The state with the most UFO sightings is", max_state, "with " + str(max_sightings) + " UFO sightings.\n")
 
 #which state has the least ufo sightings?
 
 min_state= ufo_counts.idxmin() #determines the state with the least UFO sightings
 min_sightings= ufo_counts.min() #determines the number of said UFO sightings
-print("The state with the least UFO sightings is", min_state, "with " + str(min_sightings) + " UFO sightings.")
+print("The state with the least UFO sightings is", min_state, "with " + str(min_sightings) + " UFO sightings. \n")
 
 #EXTRA 1: Use multiple aspects of a single data source in your analysis: For this, I am analyzing which shape most people used to describe the UFO as.
 
 #analyze which shape did most people describe the UFO as? 
 
 shape_counts= df['Data.Shape'].value_counts()
+print("Below is a list of each shape and how many times people described a UFO as that shape: \n ")
 print(shape_counts)
 
 #which shape is the most common description of the UFO?
